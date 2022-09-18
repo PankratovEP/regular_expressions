@@ -14,3 +14,10 @@ def vhozhdenie_slova():
         line = line.rstrip()
         if search(r'\bcat\b', line):
             print(line)
+
+
+def tri_simv():
+    for line in sys.stdin:
+        line = line.rstrip()
+        if search(r'z...z', line):
+            print(line)
