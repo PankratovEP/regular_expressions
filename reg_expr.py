@@ -57,3 +57,10 @@ def zamena_bukv():
         line = line.rstrip()
         line = sub(r'\b(\w)(\w)(\w*)\b', r'\2\1\3', line)
         print(line)
+
+
+def zamena_povtorov():
+    for line in sys.stdin:
+        line = line.rstrip()
+        line = sub(r'(\w)(\1*)',r'\1',line)
+        print(line)
