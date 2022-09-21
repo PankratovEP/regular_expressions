@@ -50,3 +50,10 @@ def grupp_change():
         line = line.rstrip()
         line = sub(r'\ba+\b', 'argh', line, 1, IGNORECASE)
         print(line)
+
+
+def zamena_bukv():
+    for line in sys.stdin:
+        line = line.rstrip()
+        line = sub(r'\b(\w)(\w)(\w*)\b', r'\2\1\3', line)
+        print(line)
