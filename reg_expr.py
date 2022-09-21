@@ -44,3 +44,9 @@ def zamena_slov():
         line = sub('human', 'computer', line)
         print(line)
 
+
+def grupp_change():
+    for line in sys.stdin:
+        line = line.rstrip()
+        line = sub(r'\ba+\b', 'argh', line, 1, IGNORECASE)
+        print(line)
